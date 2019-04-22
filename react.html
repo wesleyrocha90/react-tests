@@ -1,0 +1,29 @@
+<html>
+	<header>
+		<title>React</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react-dom.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.21.1/babel.min.js"></script>
+		<script type="text/babel">
+			class Greeting extends React.Component {
+				render() {
+					return (
+						<div style={{border: '1px solid black'}}>
+							<h1>{this.props.title}</h1>
+							<p>{this.props.description}</p>
+						</div>
+					);	
+				}
+			}
+							
+			ReactDOM.render(
+				<Greeting name="Hello React World" description="Experimentando o react"/>,
+				document.getElementById('root')
+			);
+		</script>
+	</header>
+	<body>
+		<div id="root"></div>
+	</body>
+</html>
